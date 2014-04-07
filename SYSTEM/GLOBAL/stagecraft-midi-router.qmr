@@ -1,0 +1,22 @@
+1 0
+Keystation: Transport Buttons
+1 1
+0 0 9
+0 127 0
+0 127 0 127
+2 0
+0
+Keystation: Drum Pads
+0 0
+9 9 9
+0 127 0
+0 127 0 127
+2 0
+0
+Keystation: Keys Out
+0 0
+0 0 0
+0 127 0
+0 127 0 127
+2 0
+1
