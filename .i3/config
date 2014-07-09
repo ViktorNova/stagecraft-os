@@ -16,8 +16,8 @@ set $mod Mod1
 ###################
 # class                 border  backgr. text    indicator
 client.focused          #0055ff #0055ff #000000 #2e9ef4
-client.focused_inactive #0055ff #0055ff #000000 #484e50
-client.unfocused        #000066 #111111 #0055ff #0800ab
+client.focused_inactive #0022ff #0055ff #000000 #484e50
+client.unfocused        #000070 #111111 #0055ff #0800ab
 client.urgent           #aaff00 #900000 #ffffff #900000
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -26,8 +26,7 @@ font pango:Enter Sansman 12
 
 #Fat borders for easier use on touchscreens
 # DISABLED FOR OLDER i3
-new_window pixel 6
-new_float pixel 6
+new_window normal 6
 
 # Hide borders that touch the edge (to save space)
 hide_edge_borders both
@@ -47,6 +46,8 @@ bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
 bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
 bindsym XF86AudioMute exec amixer -q set Master toggle
 
+# Print Screen
+bindsym Print exec xfce4-screenshooter
 
 # Ctrl + Alt + Left/Right to switch workspaces
 bindsym $mod+Ctrl+Left workspace prev
@@ -120,43 +121,55 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # switch to workspace
-bindsym $mod+1 workspace 1: SESSION     
-bindsym $mod+2 workspace 2: PLUGINS / FX    
-bindsym $mod+3 workspace 3: DRUM MACHINE
-bindsym $mod+4 workspace 4: SEQUENCER   
-bindsym $mod+5 workspace 5: ARPEGGIATOR 
+bindsym $mod+1 workspace 1 SESSION     
+bindsym $mod+2 workspace 2 PLUGINS / FX
+bindsym $mod+3 workspace 3 DRUM MACHINE
+bindsym $mod+4 workspace 4 SEQUENCER   
+bindsym $mod+5 workspace 5 ARPEGGIATOR 
 bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8: FILE MANAGER
-bindsym $mod+9 workspace 9: DEV         
-bindsym $mod+0 workspace 10: WEB        
+bindsym $mod+7 workspace 7 DMX LIGHTING
+bindsym $mod+8 workspace 8 FILE MANAGER
+bindsym $mod+9 workspace 9 DEV         
+bindsym $mod+0 workspace 10 WEB        
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1: SESSION     
-bindsym $mod+Shift+2 move container to workspace 2: PLUGINS / FX
-bindsym $mod+Shift+3 move container to workspace 3: DRUM MACHINE
-bindsym $mod+Shift+4 move container to workspace 4: SEQUENCER   
-bindsym $mod+Shift+5 move container to workspace 5: ARPEGGIATOR 
+bindsym $mod+Shift+1 move container to workspace 1 SESSION     
+bindsym $mod+Shift+2 move container to workspace 2 PLUGINS / FX
+bindsym $mod+Shift+3 move container to workspace 3 DRUM MACHINE
+bindsym $mod+Shift+4 move container to workspace 4 SEQUENCER   
+bindsym $mod+Shift+5 move container to workspace 5 ARPEGGIATOR 
 bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8: FILE MANAGER
-bindsym $mod+Shift+9 move container to workspace 9: DEV         
-bindsym $mod+Shift+0 move container to workspace 10: WEB        
+bindsym $mod+Shift+7 move container to workspace 7 DMX LIGHTING
+bindsym $mod+Shift+8 move container to workspace 8 FILE MANAGER
+bindsym $mod+Shift+9 move container to workspace 9 DEV         
+bindsym $mod+Shift+0 move container to workspace 10 WEB        
+
+# Allow popups during full screen by taking you out of full screen automatically
+popup_during_fullscreen leave_fullscreen
 
 # START APPS ON SPECIFIC WORKSPACES
 
-assign [class="Non-Session-Manager"]    1: SESSION     
-assign [class="Claudia.py"]		1: SESSION     
-assign [class="Qmidiroute"]		1: SESSION     
-assign [class="Carla.py"]               2: PLUGINS / FX
-assign [class="Hydrogen"]               3: DRUM MACHINE
-assign [class="Qtractor"]               4: SEQUENCER   
-assign [class="Los-2014"]               4: SEQUENCER   
-assign [class="dino"]			4: SEQUENCER   
-assign [class="Dino"]			4: SEQUENCER   
-assign [class="muse"]               	4: SEQUENCER   
-assign [class="Qmidiarp"]              	5: ARPEGGIATOR 
-assign [class="Pcmanfm"] 		8: FILE MANAGER
+assign [class="Qmidiroute"]             1 MIDI
+for_window [class="Qmidiroute"]                         	mode tabbed
+
+
+assign [class="Non-Session-Manager"]    1 SESSION     
+assign [class="Claudia.py"]		1 SESSION     
+assign [class="Catia.py"]		1 SESSION     
+assign [class="carla"]			2 PLUGINS / FX
+assign [class="Carla"]			2 PLUGINS / FX
+assign [class="Hydrogen"]               3 DRUM MACHINE
+assign [class="Qtractor"]               4 SEQUENCER   
+assign [class="Non-Sequencer"]		4 SEQUENCER   
+assign [class="Muse"]			4 SEQUENCER   
+assign [class="Los-2014"]               4 SEQUENCER   
+assign [class="Oomidi"]			4 SEQUENCER   
+assign [class="dino"]			4 SEQUENCER   
+assign [class="Dino"]			4 SEQUENCER   
+assign [class="muse"]               	4 SEQUENCER   
+assign [class="Qmidiarp"]              	5 ARPEGGIATOR 
+assign [class="Qlcplus"]              	7 DMX LIGHTING
+assign [class="Pcmanfm"] 		8 FILE MANAGER
 
 
 
@@ -165,9 +178,26 @@ default_orientation vertical
 workspace_layout stacking
 
 # APP-SPECIFIC WINDOW SETTINGS
-for_window [class="Claudia.py"] floating disable;mode stacing
-for_window [class="Carla.py"] floating disable;mode stacking
-for_window [class="Calf_gtk"] floating disable;mode stacking
+for_window [class="Hydrogen"] 					mode stacking
+
+# OpenOctave MIDI / LibreOctave Studio
+for_window [class="Los-2014"] 					floating disable;mode stacking
+for_window [title="LOS: Edit Controller Event"] 		floating enable
+for_window [title="LOS: Transport"] 				floating enable
+for_window [title="OOMidi: Transport"] 				floating enable
+for_window [title="LOS: Audio/Midi Connections Manager"] 	floating enable
+
+
+for_window [class="Claudia.py"] 				floating disable;mode stacking
+#for_window [class="carla"]		 			floating disable;mode stacking
+#for_window [class="Carla"]			 		floating disable;mode stacking
+for_window [class="Calf_gtk"]	 				floating disable;mode stacking
+for_window [class="Wine"] 					floating disable
+
+# SYSTEM 
+for_window [title="tilda"] 					floating enable; normal 6px
+
+
 
 
 # reload the configuration file
@@ -206,15 +236,34 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-
-#        status_command	i3status
-	tray_output 	none
+	id top-bar
+        font pango:Enter Sansman 16
+	position top
+	workspace_buttons no
+	status_command py3status -c ~/.i3/i3status.conf
 
  colors {
-       focused_workspace        #000000 #00ffff
-       inactive_workspace 	#00ffff #000000
-       active_workspace        	#000000 #0800ab
-       urgent_workspace         #000000 #0055ff 
+        focused_workspace       #000000 #00ffff
+        inactive_workspace      #00ffff #000000
+        active_workspace        #000000 #0800ab
+        urgent_workspace        #000000 #0055ff
+        }
+
+
+}
+
+bar {
+	id bottom-bar
+	position bottom
+	tray_output 	none
+	font pango:Enter Sansman 16
+#	strip_workspace_numbers yes # Doesn't work on older i3
+
+ colors {
+	focused_workspace       #000000 #00ffff
+	inactive_workspace 	#00ffff #000000
+	active_workspace        #000000 #0800ab
+	urgent_workspace        #000000 #0055ff 
 	}
 
 }
