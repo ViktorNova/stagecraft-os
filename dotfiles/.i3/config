@@ -122,7 +122,7 @@ bindsym $mod+a focus parent
 
 # switch to workspace
 bindsym $mod+1 workspace 1 SESSION     
-bindsym $mod+2 workspace 2 PLUGINS / FX
+bindsym $mod+2 workspace 2 INSTRUMENTS 
 bindsym $mod+3 workspace 3 DRUM MACHINE
 bindsym $mod+4 workspace 4 SEQUENCER   
 bindsym $mod+5 workspace 5 ARPEGGIATOR 
@@ -134,7 +134,7 @@ bindsym $mod+0 workspace 10 WEB
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1 SESSION     
-bindsym $mod+Shift+2 move container to workspace 2 PLUGINS / FX
+bindsym $mod+Shift+2 move container to workspace 2 INSTRUMENTS 
 bindsym $mod+Shift+3 move container to workspace 3 DRUM MACHINE
 bindsym $mod+Shift+4 move container to workspace 4 SEQUENCER   
 bindsym $mod+Shift+5 move container to workspace 5 ARPEGGIATOR 
@@ -156,8 +156,8 @@ for_window [class="Qmidiroute"]                         	mode tabbed
 assign [class="Non-Session-Manager"]    1 SESSION     
 assign [class="Claudia.py"]		1 SESSION     
 assign [class="Catia.py"]		1 SESSION     
-assign [class="carla"]			2 PLUGINS / FX
-assign [class="Carla"]			2 PLUGINS / FX
+assign [class="carla"]			2 INSTRUMENTS 
+assign [class="Carla"]			2 INSTRUMENTS 
 assign [class="Hydrogen"]               3 DRUM MACHINE
 assign [class="Qtractor"]               4 SEQUENCER   
 assign [class="Non-Sequencer"]		4 SEQUENCER   
