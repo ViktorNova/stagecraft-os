@@ -178,6 +178,8 @@ default_orientation vertical
 workspace_layout stacking
 
 # APP-SPECIFIC WINDOW SETTINGS
+for_window [title="Preferences"]		 		floating enable
+
 for_window [class="Hydrogen"] 					mode stacking
 
 # OpenOctave MIDI / LibreOctave Studio
