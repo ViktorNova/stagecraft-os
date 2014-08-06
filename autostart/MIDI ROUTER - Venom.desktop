@@ -1,0 +1,5 @@
+[Desktop Entry]
+Exec=qmidiroute /home/guest/SYSTEM/GLOBAL/MIDI-ROUTER/MIDI\\ ROUTER\\ -\\ To\\ Venom.qmr
+Name=MIDI ROUTER - Venom
+Type=Application
+Version=1.0

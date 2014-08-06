@@ -1,0 +1,5 @@
+[Desktop Entry]
+Exec=a2j_control ehw start
+Name=ALSA - JACK MIDI Bridge
+Type=Application
+Version=1.0

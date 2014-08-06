@@ -1,0 +1,5 @@
+[Desktop Entry]
+Exec=qmidiroute /home/guest/SYSTEM/GLOBAL/MIDI-ROUTER/MIDI\\ ROUTER\\ -\\ Keystation\\ 49.qmr
+Name=MIDI ROUTER - Keystation 49
+Type=Application
+Version=1.0

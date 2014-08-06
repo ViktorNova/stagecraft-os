@@ -1,0 +1,5 @@
+[Desktop Entry]
+Exec=aj-snapshot --restore /home/guest/SYSTEM/GLOBAL/GLOBAL-MIDI-ROUTING.xml
+Name=Restore Global MIDI/Audio Connections
+Type=Application
+Version=1.0

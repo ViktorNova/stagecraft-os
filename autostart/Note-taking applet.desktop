@@ -1,0 +1,7 @@
+[Desktop Entry]
+Exec=xfce4-notes
+Hidden=true
+Name=Note-taking applet
+Type=Application
+Version=1.0
+X-LxQt-Need-Tray=true

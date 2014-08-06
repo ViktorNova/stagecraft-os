@@ -1,0 +1,5 @@
+[Desktop Entry]
+Exec=node /home/guest/Desktop/NODE/node-rtpmidi-git/examples/rtpmidi-native-bridge.js
+Name=Node RTPMidi Network
+Type=Application
+Version=1.0

@@ -1,0 +1,5 @@
+[Desktop Entry]
+Exec=non-session-manager
+Name=Non Session Manager
+Type=Application
+Version=1.0

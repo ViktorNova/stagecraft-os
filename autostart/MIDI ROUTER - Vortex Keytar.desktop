@@ -1,0 +1,5 @@
+[Desktop Entry]
+Exec=qmidiroute /home/guest/SYSTEM/GLOBAL/MIDI-ROUTER/MIDI\\ ROUTER\\ -\\ Vortex\\ Keytar.qmr --portCount 5
+Name=MIDI ROUTER - Vortex Keytar
+Type=Application
+Version=1.0

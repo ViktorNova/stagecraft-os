@@ -1,0 +1,6 @@
+[Desktop Entry]
+Exec=qmidiroute ~/SYSTEM/GLOBAL/MIDI-ROUTER/MIDI\\ ROUTER\\ 1.qmr
+Hidden=true
+Name=MIDI ROUTER 1
+Type=Application
+Version=1.0

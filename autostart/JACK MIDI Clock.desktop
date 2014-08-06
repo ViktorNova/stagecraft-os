@@ -1,0 +1,5 @@
+[Desktop Entry]
+Exec=jack_midi_clock 
+Name=JACK MIDI Clock
+Type=Application
+Version=1.0
