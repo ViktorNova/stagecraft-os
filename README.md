@@ -11,16 +11,16 @@ Features such as network MIDI, OSC routing & OSC <=> MIDI translation, DMX light
 #Stagecraft OS - custom Ubuntu packages
 add-apt-repository ppa:viktornova/stagecraftos
 
-#KXstudio
-
-
 #Qt5 Configuration Tool
 add-apt-repository ppa:hda-me/qt5ct
+
 ````
 
 **Other repositories**
 ````
 #Stagecraft OS non-launchpad repo
-https://dl.bintray.com/viktornova/stagecraft-os/
+deb https://dl.bintray.com/viktornova/stagecraft-os /
 ````
+
+##Todo: add KXstudio repos
 
