@@ -1,0 +1,7 @@
+# Stagecraft OS Repositories
+
+# Ubuntu 16.04 
+deb http://ppa.launchpad.net/viktornova/stagecraftos/ubuntu xenial main 
+
+# Architecture and OS agnostic 
+deb https://dl.bintray.com/viktornova/stagecraft-os /
