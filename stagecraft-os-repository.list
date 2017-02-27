@@ -1,7 +1,11 @@
 # Stagecraft OS Repositories
 
-# Ubuntu 16.04 
-deb http://ppa.launchpad.net/viktornova/stagecraftos/ubuntu xenial main 
+sudo add-apt-repository ppa:/viktornova/stagecraftos
+sudo add-apt-repository ppa:notepadqq-team/notepadqq
 
-# Architecture and OS agnostic 
+
+
+# Add the rest of this to sources.list
+
+# Architecture/OS agnostic 
 deb https://dl.bintray.com/viktornova/stagecraft-os /
