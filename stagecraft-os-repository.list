@@ -1,7 +1,8 @@
 # Stagecraft OS Repositories
 
-sudo add-apt-repository ppa:/viktornova/stagecraftos
-sudo add-apt-repository ppa:notepadqq-team/notepadqq
+hadd-apt-repository ppa:/viktornova/stagecraftos
+add-apt-repository ppa:notepadqq-team/notepadqq
+add-apt-repository ppa:klaus-vormweg/awesome
 
 
 
