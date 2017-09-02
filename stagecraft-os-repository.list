@@ -1,12 +1,14 @@
 # Stagecraft OS Repositories
+# TODO: make this one big list
 
-hadd-apt-repository ppa:/viktornova/stagecraftos
+add-apt-repository ppa:/viktornova/stagecraftos
 add-apt-repository ppa:notepadqq-team/notepadqq
 add-apt-repository ppa:klaus-vormweg/awesome
 
 
 
-# Add the rest of this to sources.list
+# Bintray repo
+deb https://dl.bintray.com/viktornova/stagecraft-os-64 /
 
 # Architecture/OS agnostic 
 deb https://dl.bintray.com/viktornova/stagecraft-os /
