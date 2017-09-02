@@ -23,6 +23,12 @@ wget -qO - https://bintray.com/user/downloadSubjectPublicKey?username=bintray | 
 sudo echo deb https://dl.bintray.com/viktornova/stagecraft-os / > /etc/apt/sources.list.d/stagecraft-os.list
 sudo echo deb https://dl.bintray.com/viktornova/stagecraft-os-64 / >> /etc/apt/sources.list.d/stagecraft-os.list
 
+
+# QLC+ Repo via OpenSuse build service
+wget -qO - http://download.opensuse.org/repositories/home:/mcallegari79/xUbuntu_16.04/Release.key | sudo apt-key add -
+sudo echo deb http://download.opensuse.org/repositories/home:/mcallegari79/xUbuntu_16.04/ ./ > /etc/apt/sources.list.d/qlcplus.list
+
+
 ````
 
 ##Todo: add KXstudio repos
