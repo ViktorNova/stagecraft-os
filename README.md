@@ -19,7 +19,7 @@ add-apt-repository ppa:hda-me/qt5ct
 **Other repositories**
 ````
 #Stagecraft OS non-launchpad repo
-wget -qO - https://bintray.com/user/downloadSubjectPublicKey?username=bintray | sudo apt-key add -
+wget -qO - 'https://bintray.com/user/downloadSubjectPublicKey?username=bintray' | sudo apt-key add -
 sudo echo deb https://dl.bintray.com/viktornova/stagecraft-os / > /etc/apt/sources.list.d/stagecraft-os.list
 sudo echo deb https://dl.bintray.com/viktornova/stagecraft-os-64 / >> /etc/apt/sources.list.d/stagecraft-os.list
 
